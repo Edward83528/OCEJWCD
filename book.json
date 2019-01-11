@@ -1,0 +1,31 @@
+{
+    "plugins": [
+        "-highlight",
+        "theme-comscore",
+        "tbfed-pagefooter",
+        "prism",
+        "splitter",
+        "bootstrap-callout",
+        "sectionx",
+        "todo",
+        "disqus",
+        "github"
+     ],
+    "pluginsConfig": {
+    	"tbfed-pagefooter": {
+  			"modify_label": "最後編輯時間：",
+  			"modify_format": "YYYY-MM-DD HH:mm:ss"
+		},
+		"prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
+        },
+        "disqus": {
+            "shortName": "test-n76okrptvh"
+        },
+        "github": {
+            "url": "https://github.com/Carrie-Lai/Test"
+        }
+	}
+}
