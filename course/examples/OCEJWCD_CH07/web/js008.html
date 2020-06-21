@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>js008</title>
+        <meta charset="UTF-8">
+        <script>
+            var price1 = 150;
+            var price2 = 350;
+            var total = price1 + price2;
+            
+            var pi = 3.14159;
+            var name = "Simon";
+            age = 35;
+            info = name + ", " + age;
+        </script>
+    </head>
+    <body>
+        <h1>js008</h1>
+        Total: <span id="total"></span><br/>
+        PI: <span id="pi"></span><br/>
+        Name: <span id="name"></span><br/>
+        Age: <span id="age"></span><br/>
+        Info: <span id="info"></span><br/>
+        
+        <script>
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("pi").innerHTML = pi;
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("age").innerHTML = age;
+            document.getElementById("info").innerHTML = info;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>js011</title>
+        <meta charset="UTF-8">
+        <script>
+            function setInfo(message) {
+                document.getElementById("info").innerHTML = message;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>js011</h1>
+        info: <span id="info"></span><br/>
+        
+        <button onclick="this.innerHTML=Date()">Date Time</button>
+        <button onclick="setInfo('Hello! Event!')">Click</button>
+        <button onmouseover="setInfo('mouseover')" onmouseout="setInfo('mouseout')">Mouse</button>
+        
+    </body>
+</html>

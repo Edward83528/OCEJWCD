@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>js009</title>
+        <meta charset="UTF-8">
+        <script>
+            var greet = "Hello! JavaScript!";
+            var len = greet.length;
+            var greet2 = "Hello! \"JavaScript\"!";
+            var greet3 = "Hello! \
+                          JavaScript!";
+            var greet4 = "Hello! " + "JavaScript!";
+        </script>
+    </head>
+    <body>
+        <h1>js009</h1>
+        greet: <span id="greet"></span><br/>
+        len: <span id="len"></span><br/>
+        greet2: <span id="greet2"></span><br/>
+        greet3: <span id="greet3"></span><br/>
+        greet4: <span id="greet4"></span><br/>
+        greet==greet4: <span id="g4"></span><br/>
+        
+        <script>
+            document.getElementById("greet").innerHTML = greet;
+            document.getElementById("len").innerHTML = len;
+            document.getElementById("greet2").innerHTML = greet2;
+            document.getElementById("greet3").innerHTML = greet3;
+            document.getElementById("greet4").innerHTML = greet4;
+            document.getElementById("g4").innerHTML = (greet == greet4);
+        </script>
+    </body>
+</html>

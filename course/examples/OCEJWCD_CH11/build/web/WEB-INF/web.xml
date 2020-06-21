@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <listener-class>net.hello.listeners.MyServletContextListener</listener-class>
+    </listener>
+    
+    <context-param>
+        <param-name>email</param-name>
+        <param-value>hello.context@google.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>name</param-name>
+        <param-value>Hello Context</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>Welcome01Servlet</servlet-name>
+        <servlet-class>net.hello.servlets.Welcome01Servlet</servlet-class>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>hello.servlet@google.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>Hello Servlet</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>Welcome02Servlet</servlet-name>
+        <servlet-class>net.hello.servlets.Welcome02Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListMemberServlet</servlet-name>
+        <servlet-class>net.hello.servlets.ListMemberServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Welcome01Servlet</servlet-name>
+        <url-pattern>/welcome01.view</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Welcome02Servlet</servlet-name>
+        <url-pattern>/welcome02.view</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListMemberServlet</servlet-name>
+        <url-pattern>/list_member.view</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <servlet>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>development</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>     
+</web-app>

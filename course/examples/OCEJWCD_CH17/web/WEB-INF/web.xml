@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">    
+    
+    <resource-ref>
+        <res-ref-name>jdbc/ocejwcdDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+    
+    <servlet>
+        <servlet-name>StepOneServlet</servlet-name>
+        <servlet-class>net.hello.servlets.StepOneServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>StepOneServlet</servlet-name>
+        <url-pattern>/step_one.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>StepTwoServlet</servlet-name>
+        <servlet-class>net.hello.servlets.StepTwoServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>StepTwoServlet</servlet-name>
+        <url-pattern>/step_two.do</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+        <init-param>
+            <param-name>development</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+</web-app>

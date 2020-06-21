@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>js010</title>
+        <meta charset="UTF-8">
+        <script>
+            var names=["Simon", "Mary", "John"];
+            var names2=new Array("Simon", "Mary", "John");
+            
+            var person={name:"simon", age:35};
+            var person2={name:"mary", age:25};
+            var person3={name:"john", age:12};
+            
+            var persons=[person, person2, person3];
+        </script>
+    </head>
+    <body>
+        <h1>js010</h1>
+        names[0]: <span id="n0"></span><br/>
+        names[1]: <span id="n1"></span><br/>
+        names[2]: <span id="n2"></span><br/>
+        names.length: <span id="nlen"></span><br/><br/>
+        
+        names2[0]: <span id="n20"></span><br/>
+        names2[1]: <span id="n21"></span><br/>
+        names2[2]: <span id="n22"></span><br/>
+        names2[3]: <span id="n23"></span><br/><br/>
+        
+        person.name: <span id="pn"></span><br/>
+        person.age: <span id="pa"></span><br/>
+        persons[2].name: <span id="p2n"></span><br/>
+        persons[2].age: <span id="p2a"></span><br/>
+        
+        <script>
+            document.getElementById("n0").innerHTML = names[0];
+            document.getElementById("n1").innerHTML = names[1];
+            document.getElementById("n2").innerHTML = names[2];
+            document.getElementById("nlen").innerHTML = names.length;
+            
+            names2.sort();
+            names2.push("Hello");
+            
+            document.getElementById("n20").innerHTML = names2[0];
+            document.getElementById("n21").innerHTML = names2[1];
+            document.getElementById("n22").innerHTML = names2[2];
+            document.getElementById("n23").innerHTML = names2[3];
+            
+            document.getElementById("pn").innerHTML = person.name;
+            document.getElementById("pa").innerHTML = person.age;
+            
+            document.getElementById("p2n").innerHTML = persons[2].name;
+            document.getElementById("p2a").innerHTML = persons[2].age;
+        </script>
+    </body>
+</html>

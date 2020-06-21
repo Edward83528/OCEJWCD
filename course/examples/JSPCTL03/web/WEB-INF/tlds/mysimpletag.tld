@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>mysimpletag</short-name>
+  <uri>http://macspeed.net/jsp/ctl/mysimpletag</uri>
+
+  <tag>
+    <name>mySimpleTag</name>
+    <tag-class>net.macspeed.tags.MySimpleTagHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+
+  <tag>
+    <name>mySimpleListTag</name>
+    <tag-class>net.macspeed.tags.MySimpleListTagHandler</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+        <name>items</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>mySimpleForEachTag</name>
+    <tag-class>net.macspeed.tags.MySimpleForEachTagHandler</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+        <name>items</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+        <name>var</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>mySwitch</name>
+    <tag-class>net.macspeed.tags.MySimpleSwitchTagHandler</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+        <name>var</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>myCase</name>
+    <tag-class>net.macspeed.tags.MySimpleCaseTagHandler</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+        <name>value</name>
+        <required>true</required>
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>myDefault</name>
+    <tag-class>net.macspeed.tags.MySimpleDefaultTagHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+
+  <tag>
+    <name>examples</name>
+    <tag-class>net.macspeed.tags.ExamplesTagHandler</tag-class>
+    <body-content>empty</body-content>
+
+    <attribute>
+        <name>sample</name>
+        <required>true</required>
+        <rtexprvalue>false</rtexprvalue>
+    </attribute>
+  </tag>
+</taglib>
